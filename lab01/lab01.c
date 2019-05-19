@@ -2,9 +2,6 @@
 #include <stdlib.h>
 #include <math.h>
 
-z
-
-
 #define N 400 // rozmiar macierzy A: NxN
 
 int main(void) {
