@@ -109,6 +109,12 @@ int main()
             }
             fclose(plik3);
         }
+        
+        free_vector(f, 1, 2 * Nk);
+        free_vector(fo, 1, 2 * Nk);
+        free_vector(g1, 1, 2 * Nk);
+        free_vector(g2, 1, 2 * Nk);
+        
     } //koniec petli zewnetrznej
 
     return 0;
