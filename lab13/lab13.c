@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include "/opt/NR/numerical_recipes.c/nrutil.h"
-#include "/opt/NR/numerical_recipes.c/nrutil.c"
-#include "/opt/NR/numerical_recipes.c/bessi0.c"
-#include "/opt/NR/numerical_recipes.c/gauher.c"
+#include "nrutil.h"
+#include "nrutil.c"
+#include "bessi0.c"
+#include "gauher.c"
 
 double lengthVec(double *a, double *b);
 
