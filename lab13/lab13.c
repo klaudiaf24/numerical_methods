@@ -6,7 +6,7 @@
 #include "/opt/NR/numerical_recipes.c/bessi0.c"
 #include "/opt/NR/numerical_recipes.c/gauher.c"
 
-double odl(double *a, double *b);
+double lengthVec(double *a, double *b);
 
 int main()
 {
@@ -36,21 +36,26 @@ int main()
             double sigma = 1.0 / sqrt(2);
 
             double *R10 = dvector(1, 2);
-            R10[1] = 0.;
-            R10[2] = 0.;
+            R10[1] = 0.0;
+            R10[2] = 0.0;
 
             double *R20 = dvector(1, 2);
             R20[1] = x20;
-            R20[2] = 0.;
+            R20[2] = 0.0;
 
-            double r0 = fabs(odl(R10, R20));
+            double r0 = fabs(lengthVec(R10, R20));
 
             //////
             //1.
             /////
 
             double Vdok = 0.0;
-            Vdok = pow((2 * M_PI), 2) * pow(sigma, 4) * (sqrt(M_PI) / (2 * sigma)) * exp(-pow(r0, 2) / (8 * pow(sigma, 2))) * bessi0(pow(r0, 2) / (8 * pow(sigma, 2)));
+            Vdok = pow((2 * M_PI), 2) 
+                    * pow(sigma, 4) 
+                    * (sqrt(M_PI) / (2 * sigma)) 
+                    * exp(-pow(r0, 2) 
+                    / (8 * pow(sigma, 2))) 
+                    * bessi0(pow(r0, 2) / (8 * pow(sigma, 2)));
 
             //////
             //2.
@@ -121,7 +126,7 @@ int main()
     fclose(plik7);
 }
 
-double odl(double *a, double *b)
+double lengthVec(double *a, double *b)
 {
     double wyn;
     wyn = sqrt(pow(b[1] - a[1], 2) + pow(b[2] - a[2], 2));
