@@ -1,8 +1,8 @@
 #include "stdio.h"
 #include "math.h"
 #include "stdlib.h"
-#include "/opt/NR/numerical_recipes.c/nrutil.h"
-#include "/opt/NR/numerical_recipes.c/nrutil.c"
+#include "nrutil.h"
+#include "nrutil.c"
 
 #define frand() ((double)rand()) / (RAND_MAX + 1.0)
 
