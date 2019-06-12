@@ -63,12 +63,6 @@ int main()
             fprintf(zad1, "%d %15g %15g\n", i, (I / i), s);
     }
 
-    // sigma2 = pow(I, 2);
-    // sigma2 /= N;
-    // sigma = (1.0 / N) * (sigma1 - sigma2);
-    // s = sqrt(sigma / N);
-    // I /= N;
-    // printf("%g\n %g\n", I, s);
 
     //2.
     R1[1] = R1[2] = R1[3] = R2[1] = R2[2] = 1.0;
@@ -93,6 +87,11 @@ int main()
         if ((i % 1000) == 0)
             fprintf(zad2, "%d %15g %15g\n", i, (I / i), s);
     }
+	
+	fclose(zad1);
+	fclose(zad2);
+	free_dvector(R1, 1, 3);
+	free_dvector(R2, 1, 3);
 	
     return 0;
 }
